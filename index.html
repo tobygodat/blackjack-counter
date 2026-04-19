@@ -8,7 +8,7 @@
 <body>
 
 <h1>Blackjack Card Counter</h1>
-<p>Uses the Hi-Lo system. Click a card every time you see one dealt.</p>
+<p>Uses the Hi-Lo system. You can play a hand against the dealer below, or click the card buttons to track cards at a real table.</p>
 
 <div class="box">
   <h2>Count</h2>
@@ -26,7 +26,25 @@
 </div>
 
 <div class="box">
-  <h2>Cards</h2>
+  <h2>Play Blackjack</h2>
+  <p>Bankroll: $<span id="bankroll">100</span></p>
+  <p>
+    Bet: $<input type="number" id="betInput" value="10" min="1">
+    <button id="dealBtn">Deal</button>
+  </p>
+  <p>Dealer: <span id="dealerHand" class="hand">-</span></p>
+  <p>You: <span id="playerHand" class="hand">-</span></p>
+  <p>
+    <button id="hitBtn" disabled>Hit</button>
+    <button id="standBtn" disabled>Stand</button>
+    <button id="doubleBtn" disabled>Double</button>
+  </p>
+  <p id="gameMsg">Place your bet and click Deal.</p>
+</div>
+
+<div class="box">
+  <h2>Manual Cards</h2>
+  <p>Click a card to add it to the count (for tracking a real game).</p>
   <p>Low cards (+1):</p>
   <button class="card-btn" data-card="2">2</button>
   <button class="card-btn" data-card="3">3</button>
@@ -47,12 +65,12 @@
 
 <div class="box">
   <h2>Controls</h2>
-  <button id="undoBtn">Undo</button>
-  <button id="resetBtn">Reset</button>
+  <button id="undoBtn">Undo Manual Card</button>
+  <button id="resetBtn">Reset Shoe &amp; Count</button>
 </div>
 
 <div class="box">
-  <h2>History</h2>
+  <h2>History (last 30 cards)</h2>
   <p id="history">No cards yet.</p>
 </div>
 
